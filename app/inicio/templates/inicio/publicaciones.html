@@ -1,0 +1,12 @@
+{% extends "inicio/index.html" %}
+{% block content %}
+<div class="titulo-pagina">Publicaciones</div><br>
+<div class="container">
+  {% for publicacion in publicaciones %}
+  <div class="col-4 imag efecto">
+    <a href="#"><img src="{{publicacion.img_principal.url}}" class="principal" style="height: 220px;
+    width: 350px;"></a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

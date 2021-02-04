@@ -1,0 +1,17 @@
+{% extends "inicio/index.html" %}
+
+
+{% block content %}
+<div class="titulo-pagina">Fotografias</div><br>
+
+<div class="container fotos">
+  {% for foto in fotos %}
+  <div class="col-12">
+    <img src="{{foto.foto.url}}" 
+    style="height: 150px;
+    width: 150px;">
+  </div>
+
+  {% endfor %}
+</div>
+{% endblock content %}

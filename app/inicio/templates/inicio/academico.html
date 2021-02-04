@@ -1,0 +1,15 @@
+{% extends "inicio/index.html" %}
+{% block content %}
+<div class="container">
+  <div class="titulo-pagina">Academicos</div><br>
+  {% for academico in academicos %}
+  <div class="col-4 imag efecto">
+    <a href="{% url 'inicio:ver_detalles' academico.id %}"><img src="{{academico.img_principal.url}}" 
+    class="principal" 
+    style="height: 220px;
+    width: 350px;">
+     </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}

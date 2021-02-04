@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background:white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.inicio a{
+    text-decoration: none;
+    color:black;
+    font-size: 15px;
+    font-weight:  100;
+}
+
+.arq{
+    font-weight: bold;
+}
+
+.menu{
+    color: lightslategrey;
+    font-weight: 100;
+    font-size: 14px;
+}
+
+nav a:hover{
+    text-decoration: none;
+    color: lightseagreen;
+}
+
+.titulo-pagina{
+    /* text-align: left; */
+    margin-left: 15px;
+    font-size: 20px;
+    color: lightslategrey;
+    font-weight: 100;
+}
+
+.container .imag{
+    float: left;
+    height: 280px;
+    margin-bottom: -50px;
+} 
+
+.container .fotos img{
+    float: left;
+    margin:3px;
+}
+
+.efecto img:hover{
+    -webkit-transform:scale(1.05);
+    -moz-transform:scale(1.05);
+    -ms-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+    transition: 0.5s;
+    opacity: 0.9;
+}
+
+.card-body .card-subtitle{
+    font-size: 16px;
+    color: lightslategrey;
+    margin-bottom: 10px;
+    margin-left: -15px;
+}
+
+.name-arq{
+    font-size: 14px;
+    color: lightslategrey;
+    margin-bottom: 10px;
+    margin-left: -15px; 
+}
+
+.card-footer h4,h5,h6{
+    font-size: 13px;
+    color: lightslategrey;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-left: -15px;
+}
+
+.card-text{
+    font-size: 12px;
+    color: lightslategrey;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    margin-left: -15px;
+
+}
+
+.carousel-item .active{
+    align-items: center;
+}
+
+

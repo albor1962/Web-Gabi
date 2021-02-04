@@ -1,0 +1,62 @@
+{% extends 'inicio/index.html' %}
+
+{% block content %}
+      <div class="container" style="width:60%">
+            <div class="row">
+                  <div class="col-sm-12">
+                        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                              <div class="carousel-inner">
+                                    {% for imagen in detalles %}
+                              <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %} ">
+                                    <img src="{{imagen.img.url}}"  style="height:420px;" alt="..." class="d-block w-100">
+                              </div>
+                              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden"></span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden"></span>
+                              </a> 
+                                    {% endfor %}
+                              </div>
+                        </div>
+                              <div class="card-footer">
+                                    <h4 class="name-arq">Proyecto: {{imagen.proyecto.nombre}}</h4>
+                                    <h4 class="name-arq">Arquitecto: {{arquitecto}}</h4>
+                                    <h5>Ubicacion: {{imagen.proyecto.ubicacion}}</h5>
+                                    <h6>Memoria: {{imagen.proyecto.descripcion}}</h6>
+                              </div> 
+                  </div>
+            </div>
+      </div>
+     
+
+      
+      
+<!-- <div class="datos-proyecto">
+      <div class="card-body">
+      <h4 class="name-arq">Arquitecto: {{imagen.proyecto.arquitecto}}</h4>
+      <h5>Ubicacion: {{proyecto.ubicacion}}</h5>
+      <h6>Descripcion: {{proyecto.descripcion}}</h6>
+      </div>
+</div> -->
+    {% endblock content %}
+
+
+    <!-- <div class="card-body">
+      <p class="card-text">{{imagen.resumen}}</p>
+</div>
+
+
+
+      
+<div class="row">
+      <div class="col-6 imag">
+            <img src="{{imagen.img.url}}" class="card-img-top">
+     </div>
+</div>    -->
+       
+
+
+

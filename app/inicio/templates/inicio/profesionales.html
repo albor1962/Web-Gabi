@@ -1,0 +1,19 @@
+{% extends "inicio/index.html" %}
+
+
+{% block content %}
+<div class="container">
+  <div class="titulo-pagina">Profesionales</div><br>
+  {% for profesional in profesionales %}
+  <div class="col-4 imag efecto">
+    <a href="{% url 'inicio:ver_detalles' profesional.id %}"><img src="{{profesional.img_principal.url}}" 
+    class="principal" 
+    style="height: 220px;
+    width: 350px;">
+     </a>
+  </div>
+  {% endfor %}
+</div>
+
+
+{% endblock content %}

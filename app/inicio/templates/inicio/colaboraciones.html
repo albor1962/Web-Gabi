@@ -1,0 +1,16 @@
+{% extends "inicio/index.html" %}
+{% block content %}
+<div class="container">
+  <div class="titulo-pagina">Colaboraciones</div><br>
+  {% for colaboracion in colaboraciones %}
+  <div class="col-4 imag efecto">
+    <a href="{% url 'inicio:ver_detalles' colaboracion.id %}"><img src="{{colaboracion.img_principal.url}}" 
+    class="principal" 
+    style="height: 220px;
+    width: 350px;">
+     </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock content %}
+{% url 'inicio:colaboraciones' colaboracion.categoria_id %}
