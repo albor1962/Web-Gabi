@@ -1,15 +1,30 @@
 {% extends "inicio/index.html" %}
 
+{% block nav %}
+    <nav>
+      <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white">
+      <h5 class="my-0 mr-md-auto inicio"><a href="{% url 'inicio:proyectos_list' %} "><span class='name'>GABRIEL BORELLA -</span> <spam class="arq">ARQUITECTO</spam></h5></a> 
+
+      <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:academico' categoria_id=2 %}">Academicos</a>
+      <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:colaboraciones' categoria_id=1 %}">Colaboraciones</a>
+      <a class="nav-item active nav-link p-2 menu" href="{% url 'inicio:profesionales' categoria_id=3 %}">Proyectos profesionales</a>
+      <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:exp_laboral' categoria_id=4 %}">Experiencia laboral</a>
+      <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:publicaciones' categoria_id=5 %}">Publicaciones</a>
+      <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:fotos' %}">Fotografia</a>
+    </div>
+    <br>
+  </nav> 
+  {% endblock nav %}
 
 {% block content %}
-<div class="container">
-  <div class="titulo-pagina">Profesionales</div><br>
+<div class="container-md">
+  <div class="titulo-pagina"></div><br>
   {% for profesional in profesionales %}
   <div class="col-4 imag efecto">
     <a href="{% url 'inicio:ver_detalles' profesional.id %}"><img src="{{profesional.img_principal.url}}" 
     class="principal" 
-    style="height: 220px;
-    width: 350px;">
+    style="height: 210px;
+    width: 340px;">
      </a>
   </div>
   {% endfor %}

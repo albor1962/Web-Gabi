@@ -9,7 +9,6 @@ urlpatterns = [
     path('colaboraciones/<int:categoria_id>/', views.colaboraciones, name='colaboraciones'),
     path('profesionales/<int:categoria_id>/', views.profesionales, name='profesionales'),
     path('experiencia-laboral/<int:categoria_id>/', views.exp_laboral, name='exp_laboral'),
-    path('publicaciones/<int:categoria_id>/', views.exp_laboral, name='publicaciones'),
-    path('contacto/', views.contacto, name='contacto'),
+    path('publicaciones/<int:categoria_id>/', views.publicaciones, name='publicaciones'),
     path('fotos/', views.fotografia, name='fotos'),
     ]

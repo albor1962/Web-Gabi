@@ -34,9 +34,6 @@ def publicaciones(request, categoria_id):
     publicaciones = Proyecto.objects.filter(categoria_id=5)
     return render(request, 'inicio/publicaciones.html', {'publicaciones':publicaciones})
 
-def contacto(request):
-    return render(request, 'inicio/contacto.html')
-
 def fotografia(request):
     fotos = Fofografia.objects.filter(estado=True)
     return render(request, 'inicio/fotografia.html', {'fotos':fotos})

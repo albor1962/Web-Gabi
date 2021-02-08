@@ -4,13 +4,13 @@
 {% block content %}
 <div class="titulo-pagina"></div><br>
 
-<div class="container">
+<div class="container-md">
   {% for proyecto in proyectos %}
   <div class="col-4 imag efecto">
     <a href="{% url 'inicio:ver_detalles' proyecto.id %}"><img src="{{proyecto.img_principal.url}}" 
     class="principal" 
-    style="height: 220px;
-    width: 350px;">
+    style="height: 210px;
+    width: 340px;">
      </a>
   </div>
   {% endfor %}

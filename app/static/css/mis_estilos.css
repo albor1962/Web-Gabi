@@ -21,12 +21,17 @@ body{
 .menu{
     color: lightslategrey;
     font-weight: 100;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+.active {
+    color:black;
+    /* text-decoration: underline; */
 }
 
 nav a:hover{
     text-decoration: none;
-    color: lightseagreen;
+    color: black;
 }
 
 .titulo-pagina{
@@ -37,10 +42,14 @@ nav a:hover{
     font-weight: 100;
 }
 
-.container .imag{
+.container{
+    width: 85%;
+}
+
+.container-md .imag{
     float: left;
     height: 280px;
-    margin-bottom: -50px;
+    margin-bottom: -60px;
 } 
 
 .container .fotos img{
@@ -93,4 +102,37 @@ nav a:hover{
     align-items: center;
 }
 
+.datos-proyecto{
+    margin-top: 10px;
+    padding-left: 16px;
+}
 
+.container-f{
+    margin: auto;
+}
+
+/* footer */
+
+.footer-style {
+    padding-top: 50px;
+    background-color: #2C3E50;
+    border: 1px solid black;
+}
+footer {
+  color: white;
+}
+footer h3 {
+  margin-bottom: 30px;
+    font-weight: 800;
+}
+footer .footer-above {
+  padding-top: 50px;
+  background-color: #2C3E50;
+}
+footer .footer-col {
+  margin-bottom: 50px;
+}
+footer .footer-below {
+  padding: 25px 0;
+  background-color: #233140;
+}

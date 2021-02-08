@@ -11,8 +11,9 @@ class Proyecto(models.Model):
     nombre = models.CharField('Nombre del proyecto', max_length=100, blank=True, null=True)
     img_principal = models.ImageField(upload_to='principales/%Y/%m/%d', null=True, blank=True)
     ubicacion = models.CharField('Ubicacion', max_length=100, blank=True, null=True)
+    anio = models.IntegerField('A#o', blank=True, null=True)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
-    arquitecto = models.CharField('Arquitecto',max_length=300, blank=True, null=True)
+    equipo = models.CharField('Equipo de proyecto',max_length=300, blank=True, null=True)
     descripcion = models.TextField('Memoria',blank=True, null=True)
     estado = models.BooleanField(default=True)
 
