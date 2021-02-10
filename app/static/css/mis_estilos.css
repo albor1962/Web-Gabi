@@ -85,9 +85,9 @@ nav a:hover{
     -moz-transform:scale(1.05);
     -ms-transform:scale(1.05);
     -o-transform:scale(1.05);
-    transform:scale(1.05);
+    transform:scale(1.03);
     transition: 0.5s;
-    opacity: 0.9;
+    opacity: 0.5;
 }
 
 .card-body .card-subtitle{
@@ -153,9 +153,31 @@ footer {
     /* margin-bottom: 10px;
     margin-top: 400px; */
     align-self: flex-end;
-    background-color: rgba(238, 236, 236, 0.938);
+    background-color: white;
     width: 100%;
     line-height: 3px;
-    text-align: center;
+    /* text-align: center; */
     height:100px;
+}
+
+.container-footer{
+    text-align:center;
+    margin: auto;
+}
+
+.footer-name {
+    color: lightslategrey;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.footer-datos {
+    color: lightslategrey;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.footer-redes{
+    margin-bottom: 12px;
+    margin-top: -6px;
 }
