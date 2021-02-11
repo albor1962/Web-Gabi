@@ -11,7 +11,7 @@
                               
                                     {% for imagen in detalles %}
                               <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %} ">
-                                    <img src="{{imagen.img.url}}"  style="max-width:600px; max-height:700px; border: 1px solid black;" alt="..." class="d-block w-100">
+                                    <img src="{{imagen.img.url}}"  style="max-width:600px; max-height:700px;" alt="..." class="d-block w-100">
                               
                               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                     <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -25,9 +25,10 @@
 
                               <div class="datos-proyecto">
                                     <h4 class="name-proj">Proyecto: {{imagen.proyecto.nombre}}</h4>
-                                    <h4 class="name-arq">Arquitecto: {{imagen.proyecto.arquitecto}}</h4>
+                                    <h4 class="name-arq">Equipo del proyecto: {{imagen.proyecto.arquitecto}}</h4>
                                     <h5 class="name-arq">Ubicacion: {{imagen.proyecto.datos.ubicacion}}</h5>
                                     <h6 class="name-arq">Memoria: {{imagen.proyecto.descripcion}}</h6>
+                                    <br><br><br>
                               </div> 
                                     
                               </div> 
