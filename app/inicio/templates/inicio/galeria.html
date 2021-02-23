@@ -1,8 +1,43 @@
 {% extends 'inicio/index.html' %}
 
+{% block nav %}
+<nav class="navbar navbar-expand-md fixed-top mb-auto  navbar-light navbar-toggleable-md menu-fixed">
+      <!-- Brand -->
+     <label><a class="navbar-brand nombre active" href="{% url 'inicio:proyectos_list' %}">GABRIEL BORELLA - <span class="arq">ARQUITECTO</span></a></label> 
+      <!-- Button collapse -->
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#contenido-nav" aria-controls="contenido-nav" aria-expanded="false">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+      <!-- Nav content -->
+      <div class="collapse navbar-collapse" id="contenido-nav">
+            <div class="navbar-nav text-center ml-auto desplegable">
+              <a class="nav-item nav-link menu" aria-current="page" href="{% url 'inicio:academico' categoria_id=2 %}">Academicos</a>
+              <a class="nav-item nav-link menu" href="{% url 'inicio:colaboraciones' categoria_id=1 %}">Colaboraciones</a>
+              <a class="nav-item nav-link menu" href="{% url 'inicio:profesionales' categoria_id=3 %}">Proyectos profesionales</a>
+              <a class="nav-item nav-link menu" href="{% url 'inicio:exp_laboral' categoria_id=4 %}">Experiencia laboral </a>
+              <a class="nav-item nav-link menu" href="{% url 'inicio:publicaciones' categoria_id=5 %}">Publicaciones</a>
+              <a class="nav-item nav-link menu" href="{% url 'inicio:fotos' %}">Fotografias</a>
+          </div>
+      </div>
+    </nav>
+<!-- <nav class="menu">
+  <label class="logo"><a  class="active" href="{% url 'inicio:proyectos_list' %}">GABRIEL BORELLA - <span class="arq">ARQUITECTO</span></a> </label>
+  <ul class="menu_items">
+      <li><a href="{% url 'inicio:academico' categoria_id=2 %}">Academicos</a></li>
+      <li><a href="{% url 'inicio:colaboraciones' categoria_id=1 %}">Colaboraciones</a></li>
+      <li><a href="{% url 'inicio:profesionales' categoria_id=3 %}">Proyectos profesionales</a></li>
+      <li><a href="{% url 'inicio:exp_laboral' categoria_id=4 %}">Experiencia laboral</a></li>
+      <li><a href="{% url 'inicio:publicaciones' categoria_id=5 %}">Publicaciones</a></li>
+      <li><a href="{% url 'inicio:fotos' %}">Fotografias</a></li>
+  </ul>
+  <span class="btn_menu">
+      <i class="fa fa-bars"></i>
+  </span>
+</nav> -->
+  {% endblock nav %}
+
 {% block content %}
-<div class="container" style="width:50%;">
-      <br><br><br><br><br><br>
+<div class="container-md-carrousel"">
       <div class="row">
             
             <div class="col-sm-12">
@@ -11,7 +46,7 @@
                               
                                     {% for imagen in detalles %}
                               <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %} ">
-                                    <img src="{{imagen.img.url}}"  style="max-width:600px; max-height:700px;" alt="..." class="d-block w-100">
+                                    <img src="{{imagen.img.url}}" alt="..." class="d-block w-100">
                               
                               <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                                     <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -22,7 +57,7 @@
                                     <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden"></span> -->
                               </a>
-
+                        
                               <div class="datos-proyecto">
                                     <h4 class="name-proj">Proyecto: {{imagen.proyecto.nombre}}</h4>
                                     <h4 class="name-arq">Equipo del proyecto: {{imagen.proyecto.arquitecto}}</h4>
@@ -31,7 +66,7 @@
                                     <br><br><br>
                               </div> 
                                     
-                              </div> 
+                        </div>
                               {% endfor %}
                         </div>
                   </div>

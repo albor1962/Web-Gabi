@@ -1,19 +1,95 @@
 {% extends "inicio/index.html" %}
+<div class="container-md">
+{% block nav %}
+<nav class="navbar navbar-expand-md fixed-top mb-auto  navbar-light navbar-toggleable-md menu-fixed">
+  <!-- Brand -->
+ <label><a class="navbar-brand nombre active" href="#">GABRIEL BORELLA - <span class="arq">ARQUITECTO</span></a></label> 
+  <!-- Button collapse -->
+<button class="navbar-toggler" data-toggle="collapse" data-target="#contenido-nav" aria-controls="contenido-nav" aria-expanded="false">
+<span class="navbar-toggler-icon"></span>
+</button>
+  <!-- Nav content -->
+  <div class="collapse navbar-collapse" id="contenido-nav">
+    <div class="navbar-nav text-center ml-auto desplegable">
+          <a class="nav-item nav-link menu" aria-current="page" href="{% url 'inicio:academico' categoria_id=2 %}">Academicos</a>
+          <a class="nav-item nav-link menu" href="{% url 'inicio:colaboraciones' categoria_id=1 %}">Colaboraciones</a>
+          <a class="nav-item nav-link menu" href="{% url 'inicio:profesionales' categoria_id=3 %}">Proyectos profesionales</a>
+          <a class="nav-item nav-link menu" href="{% url 'inicio:exp_laboral' categoria_id=4 %}">Experiencia laboral </a>
+          <a class="nav-item nav-link menu" href="{% url 'inicio:publicaciones' categoria_id=5 %}">Publicaciones</a>
+          <a class="nav-item nav-link menu" href="{% url 'inicio:fotos' %}">Fotografias</a>
+      </div>
+  </div>
+</nav>
+{% endblock nav %}
 
 {% block content %}
-<div class="container-md">
-  <br><br><br><br>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-12 columnas">
   {% for proyecto in proyectos %}
-  <div class="col-4 imag efecto">
-    <a href="{% url 'inicio:ver_detalles' proyecto.id %}"><img src="{{proyecto.img_principal.url}}" 
-    class="principal" 
-    style="height: 220px;
-    width: 350px;">
-     </a>
-  </div>
+<section class="personas">
+    <div class="contenedor">
+
+      <article class="persona__columna">
+        <a href="{% url 'inicio:ver_detalles' proyecto.id %}"><img src="{{proyecto.img_principal.url}}"></a>
+        <div class="capa">
+          <p>{{proyecto.nombre}}</p>
+        </div>
+      </article>
+      
+    </div>
+  </section>
   {% endfor %}
 </div>
-<br><br><br><br><br>
+</div>
+</div>
 {% endblock content %}
 
-    
+
+
+<div class="col-4 imag efecto">
+  <figure>
+
+    <a href="{% url 'inicio:ver_detalles' proyecto.id %}"><img src="{{proyecto.img_principal.url}}"></a>
+
+    <div class="capa">
+      <p>{{proyecto.nombre}}</p>
+    </div>
+
+  </figure>
+</div>   
+
+
+<nav class="menu-fixed">
+  <div class="d-flex flex-column flex-md-row align-items-center bg-white">
+  <h5 class="my-0 mr-md-auto inicio"><a class="" href="{% url 'inicio:proyectos_list' %} "><span class='name'>GABRIEL BORELLA -</span> <spam class="arq">ARQUITECTO</spam></h5></a> 
+
+  <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:academico' categoria_id=2 %}">Academicos</a>
+  <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:colaboraciones' categoria_id=1 %}">Colaboraciones</a>
+  <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:profesionales' categoria_id=3 %}">Proyectos profesionales</a>
+  <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:exp_laboral' categoria_id=4 %}">Experiencia laboral</a>
+  <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:publicaciones' categoria_id=5 %}">Publicaciones</a>
+  <a class="nav-item nav-link p-2 menu" href="{% url 'inicio:fotos' %}">Fotografia</a>
+</div>
+<br>
+</nav> 
+<br><br><br><br>
+
+
+
+
+
+<nav class="menu">
+  <label class="logo"><a  class="active" href="{% url 'inicio:proyectos_list' %}">GABRIEL BORELLA - <span class="arq">ARQUITECTO</span></a> </label>
+  <ul class="menu_items">
+      <li><a href="{% url 'inicio:academico' categoria_id=2 %}">Academicos</a></li>
+      <li><a href="{% url 'inicio:colaboraciones' categoria_id=1 %}">Colaboraciones</a></li>
+      <li><a href="{% url 'inicio:profesionales' categoria_id=3 %}">Proyectos profesionales</a></li>
+      <li><a href="{% url 'inicio:exp_laboral' categoria_id=4 %}">Experiencia laboral</a></li>
+      <li><a href="{% url 'inicio:publicaciones' categoria_id=5 %}">Publicaciones</a></li>
+      <li><a href="{% url 'inicio:fotos' %}">Fotografias</a></li>
+  </ul>
+  <span class="btn_menu">
+      <i class="fa fa-bars"></i>
+  </span>
+</nav>

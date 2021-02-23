@@ -16,10 +16,12 @@ class Proyecto(models.Model):
     equipo = models.CharField('Equipo de proyecto',max_length=300, blank=True, null=True)
     descripcion = models.TextField('Memoria',blank=True, null=True)
     estado = models.BooleanField(default=True)
+    orden = models.IntegerField(blank=True, null=True)
 
     class Meta:
         verbose_name='Proyecto'
         verbose_name_plural='Proyectos'
+        ordering = ['orden']
 
     def __str__(self):
         return self.nombre
@@ -37,7 +39,7 @@ class Imagen(models.Model):
     class Meta:
         verbose_name='Imagen'
         verbose_name_plural='Imagenes'
-        ordering=['-id']
+        ordering=['id']
 
         
 class Fofografia(models.Model):
